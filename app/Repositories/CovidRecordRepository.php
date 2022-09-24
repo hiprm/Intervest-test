@@ -44,4 +44,26 @@ class CovidRecordRepository
         }
     }
 
+    public function getSummery(){
+        $summery = Summery::all();
+
+        $total_pcr_testing = DailyPcrTesting::sum('pcr_count');
+
+       $summery_result= [
+            ['title'=>'Local New Cases', 'value'=>$summery[0]['local_new_cases']],
+            ['title'=>'Local Total Cases', 'value'=>$summery[0]['local_total_cases']],
+            ["title"=>'Local Total Number of Individuals In Hospitals','value'=>$summery[0]['local_total_number_of_individuals_in_hospitals']],
+            ["title"=>'Local Deaths','value'=>$summery[0]['local_deaths']],
+            ["title"=>'Local New Deaths','value'=>$summery[0]['local_new_deaths']],
+            ["title"=>'Local Recovered','value'=>$summery[0]['local_recovered']],
+            ["title"=>'Local Active Cases','value'=>$summery[0]['local_active_cases']],
+            ["title"=>'Global New Cases','value'=>$summery[0]['global_new_cases']],
+            ["title"=>'Global Total Cases','value'=>$summery[0]['global_total_cases']],
+            ["title"=>'Global Deaths','value'=>$summery[0]['global_deaths']],
+            ["title"=>'Global New deaths','value'=>$summery[0]['global_new_deaths']],
+            ["title"=>'Total Pcr Testing Count','value'=>$total_pcr_testing],
+        ];
+        return $summery_result;
+    }
+
 }
