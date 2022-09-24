@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="bg-light p-5 rounded" style="opacity: 0.8">
+    @auth
         <a  href="/create_post" class="btn btn-primary">Create New Post</a>
+        @endauth
         <h1>Help And Guide</h1>
         @isset($help_and_guides)
             @foreach($help_and_guides as $value)
@@ -13,7 +15,7 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">{{$value->description}}</p>
-                            <a target="_blank" href="http://www.google.com" class="btn btn-primary">Read More</a>
+                            <a target="_blank" href="{{$value->link}}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>

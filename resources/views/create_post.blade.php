@@ -1,5 +1,7 @@
 @extends('layouts.app-master')
 @section('content')
+
+    
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -7,6 +9,9 @@
             </div>
         </div>
     </div>
+   
+
+    
 
     @if ($errors->any())
         <div class="alert alert-danger">
