@@ -15,8 +15,8 @@ class CreateDailyPcrTesting extends Migration
     {
         Schema::create('daily_pcr_testing', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
-            $table->integer('pcr_count')->length(20);
+            $table->date('date')->nullable();
+            $table->string('pcr_count')->length(20)->nullable();
             $table->timestamps();
         });
     }
