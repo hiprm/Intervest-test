@@ -25,3 +25,9 @@
     php artisan serve
     
 
+![image](https://user-images.githubusercontent.com/77965204/192117531-6a0e4473-9247-4fcc-bc08-bf35010e2d3c.png)
+
+![image](https://user-images.githubusercontent.com/77965204/192117560-87b3877a-ee7a-48b4-9eb5-d66dfb2fd27d.png)
+
+![image](https://user-images.githubusercontent.com/77965204/192117575-560ce5f2-5496-49af-b960-1884ded77602.png)
+
